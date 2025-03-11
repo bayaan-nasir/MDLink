@@ -1,4 +1,8 @@
 window.onload = (e) => {
+	if (!sessionStorage.getItem('currentUser')) {
+		window.location.href = 'login.html'
+	}
+
 	user = JSON.parse(sessionStorage.getItem("currentUser"));
 	var username = document.getElementsByClassName("username");
 

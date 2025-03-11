@@ -41,6 +41,19 @@ function login(e) {
 	}
 }
 
+function logout() {
+	sessionStorage.removeItem("currentUser")
+	location.reload()
+}
+
+user = JSON.parse(sessionStorage.getItem("currentUser"));
+var username = document.getElementsByClassName("username");
+
+let i;
+for (i = 0; i < username.length; i++) {
+	username[i].innerHTML = user.username;
+}
+
 var modal = document.getElementsByClassName("modal")[0];
 function openModal() {
 	modal.style.display = "flex";
@@ -49,12 +62,6 @@ function openModal() {
 function closeModal() {
 	modal.style.display = "none";
 }
-
-window.onclick = function (event) {
-	if (event.target == modal) {
-		modal.style.display = "none";
-	}
-};
 
 const doctors = [
 	{

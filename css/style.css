@@ -83,6 +83,11 @@ input[type="submit"] {
 	background-color: white;
 }
 
+.btn-danger {
+	color: white;
+	background-color: #b4403a;
+}
+
 .auth-form {
 	display: flex;
 	flex-direction: column;
@@ -93,9 +98,10 @@ input[type="submit"] {
 .form-input {
 	display: flex;
 	flex-direction: column;
+	width: 100%;
 }
 
-.form-input > label {
+.form-input > label, .form-input > h2 {
 	font-weight: 500;
 }
 
@@ -174,7 +180,6 @@ input[type="submit"] {
 	border-radius: 3px 0 0 3px;
 	font-weight: 600;
 	color: #404040;
-	background-color: #4200ff;
 }
 
 main {
@@ -291,14 +296,14 @@ table td {
 	overflow-y: auto;
 }
 
-.row {
+.row, .uneven-row {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	gap: 20px;
 }
 
-.row > :first-child {
+.uneven-row > :first-child {
 	width: 100%;
 }
 
@@ -328,3 +333,28 @@ table td {
 	justify-content: center;
 	gap: 20px;
 }
+
+.content__profile {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 20px;
+}
+
+#person > img {
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+}
+
+#person {
+	border-radius:  0 0 20px 20px;
+	padding: 10px;
+}
+
+#data {
+	width: 40%;
+	margin: 0 auto;
+	text-align: left;
+}
+
