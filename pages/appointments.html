@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<title>MDLink | Dashboard</title>
+		<link
+			rel="stylesheet"
+			href="../css/style.css" />
+	</head>
+	<body>
+		<section class="container">
+			<section class="side-nav">
+				<h2 class="logo">MD<span>Link</span></h2>
+				<nav class="links">
+					<ul>
+						<li>
+							<a
+								href="dashboard.html"
+								class="nav-link"
+								>Dashboard</a
+							>
+						</li>
+						<li>
+							<a
+								href="appointments.html"
+								class="nav-link"
+								disabled
+								>Appointments</a
+							>
+						</li>
+						<li>
+							<a
+								href="records.html"
+								class="nav-link"
+								>Records</a
+							>
+						</li>
+						<li>
+							<a
+								href="profile.html"
+								class="nav-link"
+								>Profile</a
+							>
+						</li>
+					</ul>
+				</nav>
+			</section>
+			<main>
+				<div class="profile">
+					<img
+						src="../media/profile.jpeg"
+						alt="Profile Pic" />
+					<h4 class="username"></h4>
+				</div>
+				<div class="content">
+					<h2>Appointments</h2>
+
+					<table>
+						<thead>
+							<tr>
+								<th></th>
+								<th>Name</th>
+								<th>Reason</th>
+								<th>Date</th>
+								<th>Time</th>
+								<th></th>
+							</tr>
+						</thead>
+						<tbody id="appointments">
+							<tr>
+								<td colspan="6">No appointments yet...</td>
+							</tr>
+						</tbody>
+					</table>
+					<button class="btn btn-primary" onclick="openModal()">Book Appoinment</button>
+					<div
+						class="modal"
+						id="appointment-modal">
+						<div class="modal-content">
+							<form class="auth-form" onsubmit="bookAppointment(event)">
+								<div class="form-input">
+									<label for="doctor">Doctor</label>
+									<select
+										name="doctor"
+										id="doctor">
+									</select>
+								</div>
+								<div class="form-input">
+									<label for="reason">Reason</label>
+									<input
+										type="text"
+										name="reason"
+										id="reason"
+										required />
+								</div>
+								<div class="row">
+									<div class="form-input">
+										<label for="date">Date</label>
+										<input
+											type="date"
+											name="date"
+											id="date"
+											required />
+									</div>
+									<div class="form-input">
+										<label for="time">Time</label>
+										<input
+											type="time"
+											name="time"
+											id="time"
+											required />
+									</div>
+								</div>
+								<div class="row">
+									<input type="submit" value="Book Appoinment" class="btn btn-primary">
+									<button class="btn btn-secondary" onclick="closeModal()">Cancel</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</main>
+		</section>
+		<script src="../js/script.js"></script>
+		<script src="../js/auth.js"></script>
+
+		<script src="../js/appointments.js"></script>
+	</body>
+</html>

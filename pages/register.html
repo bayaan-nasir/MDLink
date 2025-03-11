@@ -4,28 +4,27 @@
 		<meta charset="UTF-8" />
 		<meta
 			name="viewport"
-			content="width=device-width, initial-scale=1.0"
-		/>
+			content="width=device-width, initial-scale=1.0" />
 		<title>MDLink | Sign Up</title>
 		<link
 			rel="stylesheet"
-			href="../css/style.css"
-		/>
+			href="../css/style.css" />
 	</head>
 	<body>
 		<section class="index-bg">
 			<div class="index-content">
 				<h2 class="logo">MD<span>Link</span></h2>
-				<form class="auth-form">
-					<h3>Sign Up</h3>
+				<form
+					onsubmit="signUp(event)"
+					class="auth-form">
 					<div class="form-input">
 						<label for="name">Full Name</label>
 						<input
 							type="text"
 							name="name"
 							id="name"
-							required
-						/>
+							placeholder="Enter Full Name"
+							required />
 					</div>
 					<div class="form-input">
 						<label for="email">Email</label>
@@ -33,8 +32,8 @@
 							type="email"
 							name="email"
 							id="email"
-							required
-						/>
+							placeholder="Enter Email"
+							required />
 					</div>
 					<div class="form-input">
 						<label for="password">Password</label>
@@ -42,19 +41,21 @@
 							type="password"
 							name="password"
 							id="password"
-							required
-						/>
+							placeholder="Enter Password"
+							required />
 					</div>
 					<input
 						type="submit"
-						value="Sign Up"
-					/>
-					<p>Already have an account?</p>
-					<a
-						href="register.html"
-						class="link"
-						>Sign In Here</a
-					>
+						class="btn btn-primary"
+						value="Sign Up" />
+					<p>
+						Already have an account?
+						<a
+							href="login.html"
+							class="link">
+							Click Here
+						</a>
+					</p>
 				</form>
 			</div>
 		</section>
