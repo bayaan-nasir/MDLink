@@ -1,116 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta
-			name="viewport"
-			content="width=device-width, initial-scale=1.0" />
-		<title>MDLink | Dashboard</title>
-		<link
-			rel="stylesheet"
-			href="../css/style.css" />
-	</head>
-	<body>
-		<section class="container">
-			<section class="side-nav">
-				<h2 class="logo">MD<span>Link</span></h2>
-				<nav class="links">
-					<ul>
-						<li>
-							<a
-								href="dashboard.html"
-								class="nav-link"
-								>Dashboard</a
-							>
-						</li>
-						<li>
-							<a
-								href="appointments.html"
-								class="nav-link"
-								>Appointments</a
-							>
-						</li>
-						<li>
-							<a
-								href="records.html"
-								class="nav-link"
-								>Records</a
-							>
-						</li>
-						<li>
-							<a
-								href="profile.html"
-								class="nav-link"
-								disabled
-								>Profile</a
-							>
-						</li>
-					</ul>
-				</nav>
-			</section>
-			<main>
-				<div class="profile">
-					<img
-						src="../media/profile.jpeg"
-						alt="Profile Pic" />
-					<h4>Nasir Bayaan Kooli</h4>
-				</div>
-				<div class="content">
-					<h2>Profile</h2>
-					<div class="content__profile">
-						<div id="person"></div>
-						<div id="data">
-							
-						</div>
-						<button class="btn btn-danger" style="width: 40%;" onclick="logout()">Logout</button>
-					</div>
-					<div
-						class="modal"
-						id="profile-modal">
-						<div class="modal-content">
-							<form
-								class="auth-form"
-								onsubmit="setProfile(event)">
-								<div class="form-input">
-									<label for="gender">Gender</label>
-									<select
-										name="gender"
-										id="gender">
-										<option value="Male">Male</option>
-										<option value="Female">Female</option>
-									</select>
-								</div>
-								<div class="form-input">
-									<label for="dob">Date of Birth</label>
-									<input
-										type="date"
-										name="dob"
-										id="dob"
-										required />
-								</div>
-								<div class="form-input">
-									<label for="blood-group">Blood Group</label>
-									<select
-										name="blood-group"
-										id="blood-group">
-										<option value="A">A</option>
-										<option value="B">B</option>
-										<option value="AB">AB</option>
-										<option value="O">O</option>
-									</select>
-								</div>
-								<input
-									type="submit"
-									value="Save"
-									class="btn btn-primary" />
-							</form>
-						</div>
-					</div>
-				</div>
-			</main>
-		</section>
-		<script src="../js/script.js"></script>
-
-		<script src="../js/profile.js"></script>
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MDLink | Dashboard</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <section class="container">
+      <section class="side-nav">
+        <h2 class="logo">MD<span>Link</span></h2>
+        <nav class="links">
+          <ul>
+            <li>
+              <a href="dashboard.html" class="nav-link">Dashboard</a>
+            </li>
+            <li>
+              <a href="appointments.html" class="nav-link">Appointments</a>
+            </li>
+            <li>
+              <a href="records.html" class="nav-link">Records</a>
+            </li>
+            <li>
+              <a href="profile.html" class="nav-link" disabled>Profile</a>
+            </li>
+          </ul>
+        </nav>
+      </section>
+      <main>
+        <div class="profile">
+          <img src="../media/profile.jpeg" alt="Profile Pic" />
+          <h4>Nasir Bayaan Kooli</h4>
+        </div>
+        <div class="content">
+          <h2>Profile</h2>
+          <div class="content__profile">
+            <div id="person"></div>
+            <div id="data"></div>
+            <button
+              class="btn btn-danger"
+              style="width: 40%"
+              onclick="logout()"
+            >
+              Logout
+            </button>
+          </div>
+          <div class="modal" id="profile-modal">
+            <div class="modal-content">
+              <form class="auth-form" onsubmit="setProfile(event)">
+                <div class="form-input">
+                  <label for="gender">Gender</label>
+                  <select name="gender" id="gender">
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                  </select>
+                </div>
+                <div class="form-input">
+                  <label for="dob">Date of Birth</label>
+                  <input type="date" name="dob" id="dob" required />
+                </div>
+                <div class="form-input">
+                  <label for="blood-group">Blood Group</label>
+                  <select name="blood-group" id="blood-group">
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="AB">AB</option>
+                    <option value="O">O</option>
+                  </select>
+                </div>
+                <input type="submit" value="Save" class="btn btn-primary" />
+              </form>
+            </div>
+          </div>
+        </div>
+      </main>
+    </section>
+    <script src="../js/script.js"></script>
+    <script src="../js/menu.js" defer></script>
+    <script src="../js/profile.js"></script>
+  </body>
 </html>

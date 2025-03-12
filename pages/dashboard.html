@@ -1,94 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta
-			name="viewport"
-			content="width=device-width, initial-scale=1.0" />
-		<title>MDLink | Dashboard</title>
-		<link
-			rel="stylesheet"
-			href="../css/style.css" />
-	</head>
-	<body>
-		<section class="container">
-			<section class="side-nav">
-				<h2 class="logo">MD<span>Link</span></h2>
-				<nav class="links">
-					<ul>
-						<li>
-							<a
-								href="dashboard.html"
-								class="nav-link"
-								disabled
-								>Dashboard</a
-							>
-						</li>
-						<li>
-							<a
-								href="appointments.html"
-								class="nav-link"
-								>Appointments</a
-							>
-						</li>
-						<li>
-							<a
-								href="records.html"
-								class="nav-link"
-								>Records</a
-							>
-						</li>
-						<li>
-							<a
-								href="profile.html"
-								class="nav-link"
-								>Profile</a
-							>
-						</li>
-					</ul>
-				</nav>
-			</section>
-			<main>
-				<div class="profile">
-					<img
-						src="../media/profile.jpeg"
-						alt="Profile Pic" />
-					<h4 class="username"></h4>
-				</div>
-				<div class="content">
-					<h2 class="welcome">
-						Welcome,
-						<span class="username"></span>.
-					</h2>
-					<div class="dash__appointment">
-						<h4>Appointments</h4>
-						<table>
-							<thead>
-								<tr>
-									<th></th>
-									<th>Name</th>
-									<th>Date</th>
-									<th>Time</th>
-								</tr>
-							</thead>
-							<tbody id="dash__appointments">
-								<tr>
-									<td colspan="4">No appointments yet...</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-					<div class="dash__announcements">
-						<h4>Announcements</h4>
-						<ul id="dash__announcements">
-							<li><p>No announcements for you...</p></li>
-						</ul>
-					</div>
-				</div>
-			</main>
-		</section>
-		<script src="../js/script.js"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MDLink | Dashboard</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <section class="container">
+      <section class="side-nav">
+        <h2 class="logo">MD<span>Link</span></h2>
+        <nav class="links">
+          <ul>
+            <li>
+              <a href="dashboard.html" class="nav-link" disabled>Dashboard</a>
+            </li>
+            <li>
+              <a href="appointments.html" class="nav-link">Appointments</a>
+            </li>
+            <li><a href="records.html" class="nav-link">Records</a></li>
+            <li><a href="profile.html" class="nav-link">Profile</a></li>
+          </ul>
+        </nav>
+      </section>
+      <main>
+        <div class="profile">
+          <img src="../media/profile.jpeg" alt="Profile Pic" />
+          <h4 class="username"></h4>
+        </div>
+        <div class="content">
+          <h2 class="welcome">Welcome, <span class="username"></span>.</h2>
+          <div class="dash__appointment">
+            <h4>Appointments</h4>
+            <table>
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>Name</th>
+                  <th>Date</th>
+                  <th>Time</th>
+                </tr>
+              </thead>
+              <tbody id="dash__appointments">
+                <tr>
+                  <td colspan="4">No appointments yet...</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="dash__announcements">
+            <h4>Announcements</h4>
+            <ul id="dash__announcements">
+              <li><p>No announcements for you...</p></li>
+            </ul>
+          </div>
+        </div>
+      </main>
+    </section>
 
-		<script src="../js/dashboard.js"></script>
-	</body>
+    <script src="../js/menu.js" defer></script>
+    <script src="../js/script.js"></script>
+    <script src="../js/dashboard.js"></script>
+  </body>
 </html>
