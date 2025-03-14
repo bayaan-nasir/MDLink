@@ -1,64 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta
-			name="viewport"
-			content="width=device-width, initial-scale=1.0" />
-		<title>MDLink | Sign Up</title>
-		<link
-			rel="stylesheet"
-			href="../css/style.css" />
-	</head>
-	<body>
-		<section class="index-bg">
-			<div class="index-content">
-				<h2 class="logo">MD<span>Link</span></h2>
-				<form
-					onsubmit="signUp(event)"
-					class="auth-form">
-					<div class="form-input">
-						<label for="name">Full Name</label>
-						<input
-							type="text"
-							name="name"
-							id="name"
-							placeholder="Enter Full Name"
-							required />
-					</div>
-					<div class="form-input">
-						<label for="email">Email</label>
-						<input
-							type="email"
-							name="email"
-							id="email"
-							placeholder="Enter Email"
-							required />
-					</div>
-					<div class="form-input">
-						<label for="password">Password</label>
-						<input
-							type="password"
-							name="password"
-							id="password"
-							placeholder="Enter Password"
-							required />
-					</div>
-					<input
-						type="submit"
-						class="btn btn-primary"
-						value="Sign Up" />
-					<p>
-						Already have an account?
-						<a
-							href="login.html"
-							class="link">
-							Click Here
-						</a>
-					</p>
-				</form>
-			</div>
-		</section>
-		<script src="../js/script.js"></script>
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MDLink | Sign Up</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <section class="index-bg">
+      <div class="index-content">
+        <h2 class="logo">MD<span>Link</span></h2>
+        <form onsubmit="signUp(event)" class="auth-form">
+          <div class="form-input">
+            <label for="name">Full Name</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Enter Full Name"
+              required
+            />
+          </div>
+          <div class="form-input">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Enter Email"
+              required
+            />
+          </div>
+          <div class="form-input">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Enter Password"
+              required
+            />
+          </div>
+          <input type="submit" class="btn btn-primary" value="Sign Up" />
+          <p>
+            Already have an account?
+            <a href="login.html" class="link"> Click Here </a>
+          </p>
+        </form>
+      </div>
+    </section>
+    <script src="../js/script.js"></script>
+  </body>
 </html>
