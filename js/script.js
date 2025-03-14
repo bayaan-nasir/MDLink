@@ -61,6 +61,7 @@ function openModal() {
 
 function closeModal() {
 	modal.style.display = "none";
+	document.getElementById("appointment-form").reset()
 }
 
 const doctors = [

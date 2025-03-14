@@ -1,6 +1,6 @@
 window.onload = (e) => {
-	if (!sessionStorage.getItem('currentUser')) {
-		window.location.href = 'login.html'
+	if (!sessionStorage.getItem("currentUser")) {
+		window.location.href = "login.html";
 	}
 
 	user = JSON.parse(sessionStorage.getItem("currentUser"));
@@ -21,12 +21,14 @@ window.onload = (e) => {
 
 	var appointment_list = JSON.parse(
 		localStorage.getItem(`${user.username}_appointments`)
-	).sort((a, b) => new Date(b.date) - new Date(a.date));
+	)
+		.filter((a) => new Date(a.date).getDate() >= new Date().getDate())
+		.sort((a, b) => new Date(b.date) - new Date(a.date));
 
 	var appointments = document.getElementById("appointments");
 
 	if (appointment_list?.length) appointments.innerHTML = "";
-	appointment_list.forEach((element) => {
+	appointment_list.forEach((element, index) => {
 		appointments.innerHTML += `<tr>
 			<td>
 				<img src="${element?.doctor?.img}" alt="${element?.doctor?.name}"/>
@@ -44,7 +46,8 @@ window.onload = (e) => {
 				${element?.time}
 			</td>
 			<td>
-				<a href="tel:${element?.doctor?.number}>Call Doctor</a>
+				<button onclick="rescheduleAppointment(${index})" class="btn btn-primary">Reschedule Appointment</button>
+				<button onclick="cancelAppointment(${index})" class="btn btn-danger">Cancel Appointment</button>
 			</td>
 		</tr>`;
 	});
@@ -83,23 +86,25 @@ function bookAppointment(e) {
 			},
 		];
 	}
-	if (announcement_list) {
-		announcement_list.push({
-			assigner: doctor,
-			announcement: `New Appointment with ${doctor.name} on ${date}`,
-		});
-	} else {
-		announcement_list = [
-			{
+	if (new Date(appointment_list.date) >= new Date()) {
+		if (announcement_list) {
+			announcement_list.push({
 				assigner: doctor,
 				announcement: `New Appointment with ${doctor.name} on ${date}`,
-			},
-		];
+			});
+		} else {
+			announcement_list = [
+				{
+					assigner: doctor,
+					announcement: `New Appointment with ${doctor.name} on ${date}`,
+				},
+			];
+		}
+		localStorage.setItem(
+			`${user.username}_announcements`,
+			JSON.stringify(announcement_list)
+		);
 	}
-	localStorage.setItem(
-		`${user.username}_announcements`,
-		JSON.stringify(announcement_list)
-	);
 	localStorage.setItem(
 		`${user.username}_appointments`,
 		JSON.stringify(appointment_list)

@@ -1,12 +1,14 @@
 window.onload = (e) => {
-	if (!sessionStorage.getItem('currentUser')) {
-		window.location.href = 'login.html'
+	if (!sessionStorage.getItem("currentUser")) {
+		window.location.href = "login.html";
 	}
 
 	var appointment_list = JSON.parse(
 		localStorage.getItem(`${user.username}_appointments`)
-	).sort((a, b) => new Date(b.date) - new Date(a.date))
-	
+	)
+		.filter((a) => new Date(a.date).getDate() >= new Date().getDate())
+		.sort((a, b) => new Date(b.date) - new Date(a.date));
+
 	var appointments = document.getElementById("dash__appointments");
 
 	if (appointment_list.length) appointments.innerHTML = "";
