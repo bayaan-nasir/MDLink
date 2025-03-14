@@ -1,64 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MDLink | Dashboard</title>
-    <link rel="stylesheet" href="../css/style.css" />
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<title>MDLink | Dashboard</title>
+		<link
+			rel="stylesheet"
+			href="../css/style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
-  </head>
-  <body>
-    <section class="container">
-      <section class="side-nav">
-        <h2 class="logo">MD<span>Link</span></h2>
-        <nav class="links">
-          <ul>
-            <li>
-              <a href="dashboard.html" class="nav-link">Dashboard</a>
-            </li>
-            <li>
-              <a href="appointments.html" class="nav-link">Appointments</a>
-            </li>
-            <li>
-              <a href="records.html" class="nav-link" disabled>Records</a>
-            </li>
-            <li>
-              <a href="profile.html" class="nav-link">Profile</a>
-            </li>
-          </ul>
-        </nav>
-      </section>
-      <main>
-        <div class="profile">
-          <img src="../media/profile.jpeg" alt="Profile Pic" />
-          <h4 class="username"></h4>
-        </div>
-        <div class="content">
-          <h2>Records</h2>
-          <table>
-            <thead>
-              <tr>
-                <th>Event</th>
-                <th>Doctor</th>
-                <th>Date</th>
-                <th>Time</th>
-                <th>Remarks</th>
-              </tr>
-            </thead>
-            <tbody id="records">
-              <tr>
-                <td colspan="5">Nothing yet...</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </main>
-    </section>
-    <script src="../js/script.js"></script>
+	</head>
+	<body>
+		<section class="container">
+			<section class="side-nav">
+				<h2 class="logo">MD<span>Link</span></h2>
+				<nav class="links">
+					<ul>
+						<li>
+							<a
+								href="dashboard.html"
+								class="nav-link"
+								>Dashboard</a
+							>
+						</li>
+						<li>
+							<a
+								href="appointments.html"
+								class="nav-link"
+								>Appointments</a
+							>
+						</li>
+						<li>
+							<a
+								href="records.html"
+								class="nav-link"
+								disabled
+								>Records</a
+							>
+						</li>
+						<li>
+							<a
+								href="drugs.html"
+								class="nav-link"
+								>Pharmacy</a
+							>
+						</li>
+						<li>
+							<a
+								href="profile.html"
+								class="nav-link"
+								>Profile</a
+							>
+						</li>
+					</ul>
+				</nav>
+			</section>
+			<main>
+				<div class="profile">
+					<img
+						src="../media/profile.jpeg"
+						alt="Profile Pic" />
+					<h4 class="username"></h4>
+				</div>
+				<div class="content">
+					<h2>Records</h2>
+					<table>
+						<thead>
+							<tr>
+								<th>Event</th>
+								<th>Doctor</th>
+								<th>Date</th>
+								<th>Time</th>
+								<th>Remarks</th>
+							</tr>
+						</thead>
+						<tbody id="records">
+							<tr>
+								<td colspan="5">Nothing yet...</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</main>
+		</section>
+		<script src="../js/script.js"></script>
     <script src="../js/menu.js" defer></script>
     <script src="../js/records.js"></script>
-  </body>
+	</body>
 </html>

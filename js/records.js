@@ -1,12 +1,12 @@
 window.onload = (e) => {
-	if (!sessionStorage.getItem('currentUser')) {
-		window.location.href = 'login.html'
+	if (!sessionStorage.getItem("currentUser")) {
+		window.location.href = "login.html";
 	}
-	
+
 	var appointment_list = JSON.parse(
 		localStorage.getItem(`${user.username}_appointments`)
-	).filter(a => new Date(a.date) < new Date())
-	
+	).filter((a) => new Date(a.date).getDate() <= new Date().getDate());
+
 	var records = document.getElementById("records");
 
 	if (appointment_list.length) records.innerHTML = "";

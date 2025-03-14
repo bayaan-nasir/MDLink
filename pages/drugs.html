@@ -9,10 +9,6 @@
 		<link
 			rel="stylesheet"
 			href="../css/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-    />
 	</head>
 	<body>
 		<section class="container">
@@ -24,7 +20,6 @@
 							<a
 								href="dashboard.html"
 								class="nav-link"
-								disabled
 								>Dashboard</a
 							>
 						</li>
@@ -46,6 +41,7 @@
 							<a
 								href="drugs.html"
 								class="nav-link"
+								disabled
 								>Pharmacy</a
 							>
 						</li>
@@ -67,40 +63,11 @@
 					<h4 class="username"></h4>
 				</div>
 				<div class="content">
-					<h2 class="welcome">
-						Welcome,
-						<span class="username"></span>.
-					</h2>
-					<div class="dash__appointment">
-						<h4>Appointments</h4>
-						<table>
-							<thead>
-								<tr>
-									<th></th>
-									<th>Name</th>
-									<th>Date</th>
-									<th>Time</th>
-								</tr>
-							</thead>
-							<tbody id="dash__appointments">
-								<tr>
-									<td colspan="4">No appointments yet...</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-					<div class="dash__announcements">
-						<h4>Announcements</h4>
-						<ul id="dash__announcements">
-							<li><p>No announcements for you...</p></li>
-						</ul>
-					</div>
+					<h2 class="welcome">Pharmacy</h2>
 				</div>
 			</main>
 		</section>
-
-    <script src="../js/menu.js" defer></script>
-    <script src="../js/script.js"></script>
-    <script src="../js/dashboard.js"></script>
-  </body>
+		<script src="../js/script.js"></script>
+		<script src="../js/drugs.js"></script>
+	</body>
 </html>
