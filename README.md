@@ -19,6 +19,7 @@ This is a **Hospital Management System** designed to streamline appointment book
 │── 📂 js
 │   ├── appointments.js # Appointment logic
 │   ├── dashboard.js    # Dashboard interactions
+│   ├── drugs.js        # Pharmacy logic
 │   ├── menu.js         # Responsive menu logic
 │   ├── profile.js      # User profile management
 │   ├── records.js      # Patient records handling
@@ -28,6 +29,7 @@ This is a **Hospital Management System** designed to streamline appointment book
 │── 📂 pages
 │   ├── appointments.html  # Appointment booking page
 │   ├── dashboard.html     # Dashboard interface
+│   ├── drugs.html         # Pharmacy interface
 │   ├── login.html         # User authentication page
 │   ├── profile.html       # Profile settings page
 │   ├── records.html       # Patient records page
@@ -44,15 +46,12 @@ This is a **Hospital Management System** designed to streamline appointment book
 ## Getting Started
 ### Clone the Repository
 ```sh
-git clone https://github.com/your-username/hospital-management-system.git
-cd hospital-management-system
+git clone https://github.com/bayaan-nasir/MDLink.git
+cd MDLink
 ```
 
-###  Open in a Browser
-Simply open `index.html` in a browser to test the UI.
-
-### Live Server (Optional)
-If using VS Code, install the Live Server extension and right-click `index.html` > **Open with Live Server**.
+### Live Server
+Using VS Code, install the Live Server extension and right-click `index.html` > **Open with Live Server**.
 
 ## Contribution Guidelines
 1. Fork the repository.
@@ -61,6 +60,6 @@ If using VS Code, install the Live Server extension and right-click `index.html`
 4. Push to your fork and submit a Pull Request.
 
 ---
-**Author**: Joel Senyo  
-**Github**: Senyoj
+**Authors**: Joel Senyo, Bayaan Nasir
+**Github**: Senyoj, bayaan-nasir
 
