@@ -9,6 +9,10 @@
 		<link
 			rel="stylesheet"
 			href="../css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
 	</head>
 	<body>
 		<section class="container">
@@ -82,12 +86,12 @@
 							</tr>
 						</tbody>
 					</table>
-					<button class="btn btn-primary" onclick="openModal()">Book Appoinment</button>
+					<button class="btn btn-primary" onclick="openModal()">Book Appointment</button>
 					<div
 						class="modal"
 						id="appointment-modal">
 						<div class="modal-content">
-							<form class="auth-form" id="appointment-form" onsubmit="bookAppointment(event)">
+							<form class="auth-form" id="appointment-form">
 								<div class="form-input">
 									<label for="doctor">Doctor</label>
 									<select
@@ -122,7 +126,7 @@
 									</div>
 								</div>
 								<div class="uneven-row">
-									<input type="submit" value="Book Appoinment" class="btn btn-primary">
+									<input type="submit" value="Book Appointment" class="btn btn-primary">
 									<button class="btn btn-secondary" onclick="closeModal()">Cancel</button>
 								</div>
 							</form>
@@ -132,7 +136,8 @@
 			</main>
 		</section>
 		<script src="../js/script.js"></script>
+    <script src="../js/menu.js" defer></script>
 
-		<script src="../js/appointments.js"></script>
-	</body>
+    <script src="../js/appointments.js"></script>
+  </body>
 </html>

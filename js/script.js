@@ -61,7 +61,7 @@ function openModal() {
 
 function closeModal() {
 	modal.style.display = "none";
-	document.getElementById("appointment-form").reset()
+	location.reload()
 }
 
 const doctors = [
@@ -86,3 +86,41 @@ const doctors = [
 		phone: "+1-555-234-5678",
 	},
 ];
+
+const drug_list = [
+	{
+		img: "https://image.cnbcfm.com/api/v1/image/101763285-94819136.jpg?v=1693051202",
+		name: "Adderall",
+		price: "60"
+	},
+	{
+		img: "https://static.xfarma.it/media/catalog/product/cache/369016c29a18e368918e7a3015d9d84f/0/3/034741037-ambroxolo-eg-fl-200ml-15mg-5ml.jpg",
+		name: "Ambroxol",
+		price: "100"
+	},
+	{
+		img: "https://www.crescentpharma.com/wp-content/uploads/2016/01/Amoxicillin_250mg5ml-Oral-Suspension_100ml_FF2-1.png",
+		name: "Amoxicillin",
+		price: "70"
+	},
+	{
+		img: "https://5.imimg.com/data5/SELLER/Default/2021/6/HU/PB/RH/3911030/griseofulvin-500-mg-tablets.jpeg",
+		name: "Griseufulvin",
+		price: "120"
+	},
+	{
+		img: "https://d2jx2rerrg6sh3.cloudfront.net/image-handler/picture/2021/2/shutterstock_1082421920.jpg",
+		name: "Penicillin",
+		price: "80"
+	},
+	{
+		img: "https://cdn.commercev3.net/cdn.bernell.com/images/uploads/7260_13763_popup.jpg",
+		name: "Phenylephrine HCl Solution",
+		price: "150"
+	},
+	{
+		img: "https://www.biobrickpharma.com/wp-content/uploads/2023/06/MEDGIK-10.jpg",
+		name: "Medroxyprogesterone",
+		price: "200"
+	},
+]
