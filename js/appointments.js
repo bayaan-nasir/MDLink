@@ -75,8 +75,8 @@ function reschedule(appointment) {
 	);
 	submit.disabled = true;
 
-	doctor.selectedIndex = doctors.find(
-		(doc) => JSON.stringify(doc) === appointment.doctor
+	doctor.selectedIndex = doctors.findIndex(
+		(doc) => doc.name === appointment.doctor.name
 	);
 	doctor.disabled = true;
 	reason.value = appointment.reason;
@@ -139,7 +139,7 @@ function changeAppointment(e, appointment) {
 		`${user.username}_appointments`,
 		JSON.stringify(appointment_list)
 	);
-	location.reload()
+	location.reload();
 }
 
 function cancelAppointment(doctor, date, time) {
