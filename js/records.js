@@ -5,7 +5,7 @@ window.onload = (e) => {
 
 	var appointment_list = JSON.parse(
 		localStorage.getItem(`${user.username}_appointments`)
-	).filter((a) => new Date(a.date).getDate() <= new Date().getDate());
+	).filter((a) => new Date(a.date).getDate() < new Date().getDate());
 
 	var records = document.getElementById("records");
 

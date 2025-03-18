@@ -33,7 +33,7 @@ window.onload = (e) => {
 
   var announcement_list = JSON.parse(
     localStorage.getItem(`${user.username}_announcements`)
-  );
+  ).reverse();
   var announcements = document.getElementById("dash__announcements");
 
   if (announcement_list.length) announcements.innerHTML = "";
